@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My login page</title>
+    <link rel="stylesheet" href="loginStyling.css">
+</head>
+
+<body>
+    <header>
+        <H1>LOGIN HERE</H1>
+    </header>
+
+<div class="login">
+    <h2>Login</h2>
+    <label for="username">Username:</label>
+    <input type="text" id="username" placeholder="Enter username" required maxlength="20">
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" placeholder="Enter password" required>
+
+    <button onclick="Loginvalidation()">Log In</button>
+</div>
+</html>
+
+<script>
+function Loginvalidation() {
+    var username = document.getElementById("username").value;
+    var password = document.getElementById("password").value;
+
+    if (username === "") {
+        alert("Please enter a username");
+        document.getElementById("username").value=""
+        document.getElementById("password").value=""
+        return;
+    }
+
+    if (password.length <= 6 || password.length > 20) {
+        alert("Password must be more than 6 characters and not more than 20 characters");
+        document.getElementById("username").value=""
+        document.getElementById("password").value=""
+        return;
+    }
+
+    if (password.toLowerCase() === "password") {
+        alert('Password cannot be "password"');
+        document.getElementById("username").value=""
+        document.getElementById("password").value=""
+        return;
+    }
+    
+    if (password !=="MORG88NI"){
+        alert("Wrong Password");
+        alert("HINT: username: Morgan and password: MORG88NI")
+        document.getElementById("username").value=""
+        document.getElementById("password").value=""
+        return;
+    } else if(username !=="Morgan"){
+        alert("Wrong username");
+        alert("HINT: username: Morgan and password: MORG88NI")
+        document.getElementById("username").value=""
+        document.getElementById("password").value=""
+        return;
+    }
+
+    alert("Login successful!");
+
+       document.getElementById("username").value=""
+       document.getElementById("password").value=""
+
+       window.location.href = "vhelemuSuper.html"
+}
+
+</script>

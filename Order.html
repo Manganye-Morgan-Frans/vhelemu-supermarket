@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order</title>
+    <link rel="stylesheet" href="Order.css">
+</head>
+<body>
+    <header>
+        <h1>Order Products - Vhelemu Supermarket</h1>
+    </header>
+    
+    <nav>
+        <a href="vhelemuSuper.html">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Service</a>
+        <a href="Register.html">Register</a>
+        <a href="Order.html">Order</a>
+        <input type="text" class="Search"  name="Search" placeholder="Search.."   maxlength="20">
+    </nav>
+
+
+   <div class="products">
+        <div class="product-card">
+            <img src="maize.png" alt="Maize Meal">
+            <h3>Maize Meal</h3>
+            <p>Price: R130</p>
+            <button onclick="addToCart(130)">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+            <img src="Tin Fish.jpeg" alt="Tin Fish" >
+            <h3>Tin Fish</h3>
+            <p>Price: R30</p>
+            <button onclick="addToCart(30)">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+            <img src="cooking oil.webp" alt="Cooking Oil">
+            <h3>Cooking Oil</h3>
+            <p>Price: R80</p>
+            <button onclick="addToCart(80)">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+            <img src="eggs.jpg" alt="Eggs">
+            <h3>Eggs (1 Dozen)</h3>
+            <p>Price: R140</p>
+            <button onclick="addToCart(70)">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+            <img src="Maasbanker-10kg-net-600x450.jpeg" alt="Buck Fish">
+            <h3>Buck Fish</h3>
+            <p>Price: R250</p>
+            <button onclick="addToCart(240)">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+            <img src="CR-heads-and-feet-thumb.jpg" alt="Heads and Feet">
+            <h3>Heads & Feet</h3>
+            <p>Price: R35</p>
+            <button onclick="addToCart(25)">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+            <img src="Necks.png" alt="Necks">
+            <h3>Chicken Necks</h3>
+            <p>Price: R35</p>
+            <button onclick="addToCart(35)">Add to Cart</button>
+        </div>
+        <div class="Cart-Summary">
+            <h3>Cart Summary</h3>
+            <p>Items: <span id="items">0</span></p>
+            <p>Subtotal: R<span id="subtotal">0.00</span></p>
+            <p>VAT (15%): R<span id="vat">0.00</span></p>
+            <p>Discount: R<span id="discount">0.00</span></p>
+            <h4>Total: R<span id="total">0.00</span></h4>
+            <button onclick="validation()">Submit Order</button>
+        </div>
+    </div>
+<script>
+  
+    var subtotal = 0;
+    var items = 0;
+
+    function addToCart(price) {
+        items++;
+        subtotal += price;
+
+        var vat = subtotal * 0.15;
+        var discount = items > 5 ? subtotal * 0.10 : 0; 
+        var total = subtotal + vat - discount;
+
+        document.getElementById("items").textContent = items;
+        document.getElementById("subtotal").textContent = subtotal.toFixed(2);
+        document.getElementById("vat").textContent = vat.toFixed(2);
+        document.getElementById("discount").textContent = discount.toFixed(2);
+        document.getElementById("total").textContent = total.toFixed(2);
+  }
+
+  function validation(){
+    alert("Order submitted")
+  }
+
+  
+</script>
+</body>
+
+ <footer>
+        <a href="#">TERMS & CONDITION</a>
+        <a href="#">PRIVATE POLICY / COOKIE POLICY</a>
+        <a href="#">Vhelemu Supermarket HOLDINGS</a>
+        <p>@COPY 2025 All rights reserved Vhelemu Supermarket</p>
+    </footer>
+</html>
+
+</html>

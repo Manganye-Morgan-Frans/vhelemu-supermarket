@@ -1,0 +1,166 @@
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f0;
+            background: linear-gradient(to right,#f8f8f0, #498d4b );
+            
+        }
+        header {
+            background: url('background-image.jpg') no-repeat center center/cover;
+            text-align: center;
+            padding: 30px 20px;
+            color: #fff;
+            background: linear-gradient(to right,rgb(34, 143, 15),#4CAF50 );
+            
+        }
+
+        header img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 4px solid white;
+            margin-bottom: 10px;
+        }
+        header h1 {
+            font-size: 2.5rem;
+            margin: 0;
+            text-shadow: 1px 1px 2px #000;
+            border-radius: 20px;
+           
+        }
+        nav {
+            background-color: #388E3C;
+            padding: 12px;
+            text-align: center;
+            position: sticky;
+        }
+        nav a {
+            color: #fff;
+            margin: 0 20px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1rem;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #FFEB3B;
+        }
+
+        nav .Search{
+            left: -200;
+            padding: 2px;
+            border-radius: 6px;
+            display: block;
+            margin-left: auto;
+            margin-right: 0px;
+            margin-top: -20px;
+          
+
+        }
+        .Content {
+            padding: 40px 20px;
+            text-align: center;
+            background-color: #ffffff;
+            background: linear-gradient(to right,#f8f8f0, #498d4b );
+        }
+        .Content h2 {
+            color: #2E7D32;
+            font-size: 2rem;
+            margin-bottom: 20px;
+           
+        }
+
+        .Content p {
+            font-size: 1.1rem;
+            color: #444;
+            max-width: 800px;
+            margin: 0 auto 20px auto;
+            line-height: 1.6;
+        }
+        .Content p:last-child {
+            font-style: italic;
+            color: #888;
+        }
+
+        .Content img{
+            border-radius: 20px;
+        }
+
+    
+
+        .Content img:hover{
+            transform: scale(1.1);
+            transition: transform 0.3s;
+        }
+        .social-media {
+            background-color: #f1f1f1;
+            text-align: center;
+            padding: 15px 10px;
+            background: linear-gradient(to right,#f8f8f0, #498d4b );
+        }
+        .social-media p {
+            margin-bottom: 10px;
+            font-weight: bold;
+            color: #2E7D32;
+        }
+        .social-media img {
+            width: 35px;
+            margin: 0 8px;
+            transition: transform 0.3s;
+        }
+        .social-media img:hover {
+            transform: scale(1.2);
+        }
+        .Fresh{
+
+             background: #3ea744;
+             text-align: center;
+              color: #f8fff8;
+              font-size: 2rem;
+              animation: bounce 1s infinite alternate;
+              border-radius: 20px;
+        }
+         @keyframes bounce{
+            from {transform: translateY(0);}
+            to {transform: translateY(-20px);}
+        }
+        .Fresh img{
+             
+            position: relative;
+            border-radius: 20px;
+            display:inline-block;
+            animation: moveWords 5s linear infinite;
+            font-size: 1rem;
+            margin-bottom: 20px;
+        }
+        .Fresh img:hover{
+            
+            transform: scale(1.1);
+            transition: transform 0.3s;
+            position: relative;
+            right: 2px;
+        }
+        @keyframes moveWords{
+            0% {transform: translate(10%);}
+            100% {transform: translate(-150%);}
+        }
+
+        footer {
+            background-color: #2E7D32;
+            text-align: center;
+            padding: 15px;
+            color: white;
+        }
+        footer a {
+            color: #FFEB3B;
+            margin: 0 10px;
+            text-decoration: none;
+            font-size: 1rem;
+            display: block;
+            font-size: larger;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }

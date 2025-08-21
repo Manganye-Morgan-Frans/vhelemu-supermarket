@@ -1,0 +1,53 @@
+header{
+    background: linear-gradient(to right,rgb(17, 116, 17), rgb(188, 200, 211));
+    padding: 20px;
+    text-align: center;
+    color: rgb(185, 173, 173);
+    border-radius: 10px;
+}
+body{
+    background: linear-gradient(to right,rgb(27, 209, 27), rgb(98, 132, 155));
+    
+}
+
+header h1:hover {
+color: rgb(19, 19, 126);
+}
+
+.login{
+    text-align: center;
+    width: 500px;
+    margin: 100px auto;
+    background-color: #1c7180;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow:0 0 10px rgb(168, 216, 204)
+    
+}
+label {
+    display: block;
+    margin: 10px 0 6px;
+}
+
+.login button{
+      width: 100%;
+      padding: 10px;
+      background: rgb(8, 212, 59);
+      color: white;
+      border: none;
+      font-size: 16px;
+      border-radius: 5px;
+      margin-top: 8px;
+}
+
+button:hover {
+      background-color: rgb(1, 97, 22);
+ }
+
+ input{
+    border-radius: 5px;
+    border: none;
+    width: 50%;
+    padding: 8px;
+    text-align: center;
+ }
